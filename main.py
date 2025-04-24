@@ -14,10 +14,9 @@ class MainWindow(QMainWindow):
         style_sheet = """
             QLabel {
                 border: 2px solid black;
-                background-image: url(gato.png);
-                background-position: right;
+                border-image: url(gato.png) 0 0 0 0 stretch stretch;
+                background-position: center;
                 background-clip: content;
-                background-size: contain;
             }
         """
         central_widget.setStyleSheet(style_sheet)
