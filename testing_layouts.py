@@ -3,13 +3,15 @@ from PySide6.QtWidgets import QHBoxLayout, QLabel, QLineEdit, QPushButton, QVBox
 
 class myLabel(QLabel):
     def __init__(self, parent):
+        self.adjustSize()
         super().__init__(parent)
 
     def set_size(self):
-        self.setMinimumWidth(int(widget.width() / 3))
-        self.setMaximumWidth(int(widget.width() / 3))
-        self.setMinimumHeight(int(widget.height() / 3))
-        self.setMaximumHeight(int(widget.height() / 3))
+        # self.setMinimumWidth(int(widget.width() / 3))
+        # self.setMaximumWidth(int(widget.width() / 3))
+        # self.setMinimumHeight(int(widget.height() / 3))
+        # self.setMaximumHeight(int(widget.height() / 3))
+        self.adjustSize()
 
 
 class myWidget(QWidget):
@@ -33,10 +35,6 @@ layout_velocidade = QVBoxLayout()
 layout_erros = QVBoxLayout()
 
 label_velocidade_nome = myLabel("velocidade")
-label_velocidade_nome.setMinimumWidth(int(widget.width() / 3))
-label_velocidade_nome.setMaximumWidth(int(widget.width() / 3))
-label_velocidade_nome.setMinimumHeight(int(widget.height() / 3))
-label_velocidade_nome.setMaximumHeight(int(widget.height() / 3))
 label_velocidade_valor = myLabel("placeholder valor")
 layout_velocidade.addWidget(label_velocidade_nome)
 layout_velocidade.addWidget(label_velocidade_valor)
@@ -65,10 +63,10 @@ def print_stretch():
         print(layout_principal.stretch(i))
 
 botao_reiniciar.clicked.connect(lambda x: label_velocidade_nome.hide() if not label_velocidade_nome.isHidden() else label_velocidade_nome.show())
-widget.signal_resize.connect(label_velocidade_nome.set_size)
-widget.signal_resize.connect(label_velocidade_valor.set_size)
-widget.signal_resize.connect(label_erros_nome.set_size)
-widget.signal_resize.connect(label_erros_valor.set_size)
+# widget.signal_resize.connect(label_velocidade_nome.set_size)
+# widget.signal_resize.connect(label_velocidade_valor.set_size)
+# widget.signal_resize.connect(label_erros_nome.set_size)
+# widget.signal_resize.connect(label_erros_valor.set_size)
 widget.signal_resize.connect(lambda x: print("signal emited!"))
 
 layout_baixo.addWidget(botao_reiniciar)
