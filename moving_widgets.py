@@ -23,6 +23,7 @@ widget_filho = QWidget()
 widget_filho.setParent(widget_pai)
 widget_filho.setStyleSheet("QWidget { border: 1px solid black }")
 widget_filho.setFixedSize(100, 100)
+print(widget_filho.size())
 widget_pai.show()
 
 timeline = QTimeLine(100000)
