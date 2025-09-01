@@ -2,6 +2,8 @@ import sys
 from PySide6.QtCore import QSize, Qt
 from PySide6.QtWidgets import QApplication, QComboBox, QLabel, QMainWindow, QVBoxLayout, QWidget
 
+print("teste")
+
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
