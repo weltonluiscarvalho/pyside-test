@@ -4,6 +4,8 @@ from PySide6.QtGui import (QBrush, QPainter, QColor,
                            QPixmap, QPolygon)
 from PySide6.QtWidgets import (QApplication,QGridLayout, QWidget)
 
+print("teste")
+
 import basicdrawing_rc  # noqa: F401
 
 
