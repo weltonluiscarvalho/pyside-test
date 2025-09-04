@@ -4,6 +4,7 @@ class StringListModel(QAbstractListModel):
     def __init__(self, strings, parent=None):
 ###
         super().__init__(parent)
+####
         self._strings = strings
 
     def data(self, index, role):
