@@ -2,6 +2,7 @@ from PySide6.QtCore import QAbstractListModel, Qt
 
 class StringListModel(QAbstractListModel):
     def __init__(self, strings, parent=None):
+###
         super().__init__(parent)
         self._strings = strings
 
